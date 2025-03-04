@@ -7,14 +7,14 @@ the application of AI in DevOps, focusing on predictive analytics and anomaly. S
 
 ## Executive Summary
 
-This solution monitors system metrics in real time, detects anomalies using an autoencoder trained on the normal behavior of the machine, and triggers alerts via Prometheus and Grafana. This proactive approach minimizes downtime and supports business continuity by enhancing the system realiability.
+This solution monitors system metrics in real time, detects anomalies using an autoencoder trained on the normal behavior of the machine, and triggers alerts via Prometheus and Grafana. This proactive approach minimizes downtime and supports business continuity by enhancing the system reliability.
 
 The anomaly detection system goes beyond the traditional DevOps approach of setting fixed metric thresholds. **Instead of waiting for a single metric, for example CPU, to exceed a known limit, the pipeline continuously monitors subtle multivariate correlations between the different
-metrics**, such as CPU and memory usage, disk I/O and many more. Whenever the reconstruction error surpasses the pipeline threshold, an anomaly is flagged, and it could reveal problems before any single metric reach their own individial threshold.
+metrics**, such as CPU and memory usage, disk I/O and many more. Whenever the reconstruction error surpasses the pipeline threshold, an anomaly is flagged, and it could reveal problems before any single metric reach their own individual threshold.
 
- This proactive detection of hidden correlations and unusual resource usage patterns significantly reduces false negatives and helps DevOps teams by improving the relieability of the system, and leading to faster detection.
+This proactive detection of hidden correlations and unusual resource usage patterns significantly reduces false negatives and helps DevOps teams by improving the reliability of the system, and leading to faster detection.
 
-
+Moreover, the solution is designed for scalability and integration with modern DevOps with the option of adding automatic remediation actions such as restarting failing pods or scaling resources when anomalies are detected.
 
 ## Architecture Overview
 
@@ -83,7 +83,7 @@ Raw data is processed and enriched to improve model performance:
 
 ### Training the Autoencoder Model
 - The autoencoder is trained to learn the **normal behavior** of system metrics.
-- hyperparameter tunning is later made to get the best hyperparamters.
+- hyperparameter tuning is later made to get the best hyperparameters.
 - Once trained, the model is converted to TensorFlow Lite for efficient real time inference.
 
 ---
@@ -129,7 +129,7 @@ Raw data is processed and enriched to improve model performance:
 
 ## Conclusion
 
-AI powered DevOps can be a game changer for modern practices. Implementing this techonologies requires careful planning, but the benefits are worth the effort. 
+AI powered DevOps can be a game changer for modern practices. Implementing this technologies requires careful planning, but the benefits are worth the effort. 
 By starting to adopt AI on DevOps, the teams can put a major focus on innovation rather than firefighting, allowing to expand the full potential of their infrastructure and applications. This pipeline succesfully integrates data collection, machine learning, real time inference, and alerting.
 By combining Prometheus, Grafana, and an autoencoder served via Flask, the system automatically flags anomalous behavior and ensures proactive incident response
 
