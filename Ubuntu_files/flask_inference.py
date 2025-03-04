@@ -9,7 +9,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 app = Flask(__name__)
 
 
-model_path = "/home/marco/autoencoder_model.tflite"
+model_path = "/home/yourUser/autoencoder_model.tflite"
 interpreter = tflite.Interpreter(model_path=model_path)
 interpreter.allocate_tensors()
 input_details = interpreter.get_input_details()
@@ -23,7 +23,7 @@ threshold = 0.1998
 
 def update_anomaly_metric():
     try:
-        data_path = "/home/marco/processed_prometheus_data_scaled.csv"
+        data_path = "/home/yourUser/processed_prometheus_data_scaled.csv"
         df = pd.read_csv(data_path)
 
         latest_data = df.drop(columns=["timestamp"]).iloc[-1].values.astype(np.float32)

@@ -2,8 +2,8 @@ import numpy as np
 from tensorflow import keras
 
 
-train_data = np.load("C:/Users/Marco/train_data.npy")
-test_data = np.load("C:/Users/Marco/test_data.npy")
+train_data = np.load("C:/Users/yourUser/train_data.npy")
+test_data = np.load("C:/Users/yourUser/test_data.npy")
 
 input_dim = train_data.shape[1]
 model = keras.Sequential([
@@ -24,5 +24,5 @@ history = model.fit(
     validation_data=(test_data, test_data)
 )
 
-model.save("C:/Users/Marco/autoencoder_model.keras")
+model.save("C:/Users/yourUser/autoencoder_model.keras")
 print("Autoencoder Model Trained and Saved")

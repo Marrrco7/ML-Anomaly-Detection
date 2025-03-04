@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-file_path = "C:/Users/Marco/processed_prometheus_data_scaled.csv"
+file_path = "C:/Users/yourUser/processed_prometheus_data_scaled.csv"
 df = pd.read_csv(file_path, parse_dates=['timestamp'])
 
 #
@@ -14,8 +14,8 @@ test_df = df[df['timestamp'] < '2025-02-21']
 X_train = train_df[features].values
 X_test = test_df[features].values
 
-train_file = "C:/Users/Marco/train_data.npy"
-test_file = "C:/Users/Marco/test_data.npy"
+train_file = "C:/Users/yourUser/train_data.npy"
+test_file = "C:/Users/yourUser/test_data.npy"
 np.save(train_file, X_train)
 np.save(test_file, X_test)
 

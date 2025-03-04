@@ -3,8 +3,8 @@ from tensorflow import keras
 import numpy as np
 
 
-train_data = np.load("C:/Users/Marco/train_data.npy")
-test_data = np.load("C:/Users/Marco/test_data.npy")
+train_data = np.load("C:/Users/yourUser/train_data.npy")
+test_data = np.load("C:/Users/yourUser/test_data.npy")
 
 def build_model(hp):
     input_dim = train_data.shape[1]

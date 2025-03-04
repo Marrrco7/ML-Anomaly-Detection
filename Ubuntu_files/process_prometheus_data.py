@@ -4,10 +4,10 @@ import os
 import joblib
 from sklearn.preprocessing import MinMaxScaler
 
-raw_csv_path = "/home/marco/prometheus_data.csv"
-processed_csv_path = "/home/marco/processed_prometheus_data.csv"
-scaled_csv_path = "/home/marco/processed_prometheus_data_scaled.csv"
-scaler_path = "/home/marco/scaler.pkl"
+raw_csv_path = "/home/yourUser/prometheus_data.csv"
+processed_csv_path = "/home/yourUser/processed_prometheus_data.csv"
+scaled_csv_path = "/home/yourUser/processed_prometheus_data_scaled.csv"
+scaler_path = "/home/yourUser/scaler.pkl"
 
 
 if os.path.exists(raw_csv_path):
@@ -24,12 +24,12 @@ def extract_metric(json_file):
     except:
         return None
 
-cpu_usage = extract_metric("/home/marco/cpu_usage.json")
-memory_usage = extract_metric("/home/marco/memory_usage.json")
-disk_read = extract_metric("/home/marco/disk_read.json")
-disk_write = extract_metric("/home/marco/disk_write.json")
-network_receive = extract_metric("/home/marco/net_receive.json")
-network_transmit = extract_metric("/home/marco/net_transmit.json")
+cpu_usage = extract_metric("/home/yourUser/cpu_usage.json")
+memory_usage = extract_metric("/home/yourUser/memory_usage.json")
+disk_read = extract_metric("/home/yourUser/disk_read.json")
+disk_write = extract_metric("/home/yourUser/disk_write.json")
+network_receive = extract_metric("/home/yourUser/net_receive.json")
+network_transmit = extract_metric("/home/yourUser/net_transmit.json")
 
 new_row = {
     'timestamp': pd.Timestamp.now(),

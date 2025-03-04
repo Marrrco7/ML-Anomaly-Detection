@@ -4,9 +4,9 @@ import scipy.stats as stats
 from keras.src.saving import load_model
 
 
-autoencoder = load_model("C:/Users/Marco/autoencoder_model.keras")
+autoencoder = load_model("C:/Users/yourUser/autoencoder_model.keras")
 
-val_data = np.load("C:/Users/Marco/test_data.npy")
+val_data = np.load("C:/Users/yourUser/test_data.npy")
 
 reconstructions = autoencoder.predict(val_data)
 
@@ -49,5 +49,5 @@ else:
     threshold = mu + 3 * std
     print(f"* Using Mean + 3 Std Dev Threshold: {threshold:.4f}")
 
-np.save("C:/Users/Marco/reconstruction_errors.npy", errors)
+np.save("C:/Users/yourUser/reconstruction_errors.npy", errors)
 print("Reconstruction errors saved to reconstruction_errors.npy")

@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-reconstruction_errors = np.load("C:/Users/Marco/reconstruction_errors.npy")
+reconstruction_errors = np.load("C:/Users/yourUser/reconstruction_errors.npy")
 
 percentiles = [95, 99, 99.5]
 thresholds = {p: np.percentile(reconstruction_errors, p) for p in percentiles}

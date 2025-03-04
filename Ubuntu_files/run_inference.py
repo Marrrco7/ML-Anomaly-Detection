@@ -3,13 +3,13 @@ import pandas as pd
 import tflite_runtime.interpreter as tflite
 
 
-data_path = "/home/marco/processed_prometheus_data_scaled.csv"
+data_path = "/home/yourUser/processed_prometheus_data_scaled.csv"
 df = pd.read_csv(data_path)
 
 
 latest_data = df.drop(columns=['timestamp']).iloc[-1].values.astype(np.float32)
 
-interpreter = tflite.Interpreter(model_path="/home/marco/autoencoder_model.tflite")
+interpreter = tflite.Interpreter(model_path="/home/yourUser/autoencoder_model.tflite")
 interpreter.allocate_tensors()
 
 input_details = interpreter.get_input_details()
