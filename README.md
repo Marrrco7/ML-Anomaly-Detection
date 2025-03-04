@@ -2,7 +2,7 @@
 
 As the SDLC becomes faster and more sophisticated, the relevance of DevOps practices that could mitigate potential issues by anticipating them has grown significantly. The fusion of AI with DevOps
 practices is revolutionizing the way systems are built, deployed, and maintained. AI driven DevOps enables teams to proactively predict failures, optimize performance, and maintain system reliability. This project explores
-the application of AI in DevOps, focusing on predictive analytics and anomaly. See the [Implementation Guide](./docs/IMPLEMENTATION.md) with all the steps and architecture decisions explained.
+the application of AI in DevOps, focusing on predictive analytics and anomaly. See the [Implementation Guide](./docs/IMPLEMENTATION.pdf) with all the steps and architecture decisions explained.
 
 
 ## Executive Summary
