@@ -133,7 +133,7 @@ AI powered DevOps can be a game changer for modern practices. Implementing this 
 By starting to adopt AI on DevOps, the teams can put a major focus on innovation rather than firefighting, allowing to expand the full potential of their infrastructure and applications. This pipeline succesfully integrates data collection, machine learning, real time inference, and alerting.
 By combining Prometheus, Grafana, and an autoencoder served via Flask, the system automatically flags anomalous behavior and ensures proactive incident response
 
+---
 
-
-
+<i>Note: The autoencoder was trained with over two thousand samples that can be found in the `processed_prometheus_data_scaled.py` capturing a variety of system behaviors and workload conditions, however, the model is designed to continuously evolve as new data is collected. Future iterations can incorporate additional training data to improve accuracy and adapt to changing system patterns to ensure long term reliability.</i>
 
