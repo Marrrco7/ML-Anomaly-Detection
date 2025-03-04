@@ -1,0 +1,14 @@
+[Unit]
+Description=Flask Inference App Service
+After=network.target
+
+[Service]
+User=marco
+Group=www-data
+WorkingDirectory=/home/marco  
+Environment="PATH=/home/marco/tflite_env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
+ExecStart=/home/marco/tflite_env/bin/gunicorn --workers 4 --bind 127.0.0.1:8001 flask_inference:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
